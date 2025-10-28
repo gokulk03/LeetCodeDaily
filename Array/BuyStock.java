@@ -17,9 +17,9 @@ public class BuyStock{
         int buyPrice = prices[0];
         int currentProfit = 0;
         int maxiProfit = 0;
-        for(int i=0;i<prices.length-1;i++){
-            if(prices[i+1]<buyPrice){
-                buyPrice = prices[i+1];
+        for(int i=1;i<prices.length;i++){
+            if(prices[i]<buyPrice){
+                buyPrice = prices[i];
             }else{
                 currentProfit = prices[i]-buyPrice;
                 maxiProfit = Math.max(maxiProfit, currentProfit);
